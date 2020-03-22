@@ -436,9 +436,22 @@ export default {
         this.cords = this.changePosition();
       });
     },
-    clickBlur(event) {
-      let closestx = event.target.closest(".vs-select--options");
+    // clickBlur(event) {
+    //   let closestx = event.target.closest(".vs-select--options");
 
+    //   if (!closestx) {
+    //     this.closeOptions();
+    //     if (this.autocomplete) {
+    //       this.filterItems("");
+    //     }
+    //     this.changeValue();
+    //   }
+    // },
+    clickBlur(event) {
+      //let closestx = event.target.closest(".vs-select--options");
+      let closestx = event.target.getElementsByClassName(
+        "vs-select--options"
+      )[0];
       if (!closestx) {
         this.closeOptions();
         if (this.autocomplete) {
