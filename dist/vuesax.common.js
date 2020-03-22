@@ -2471,16 +2471,29 @@ function vsSelectvue_type_script_lang_js_objectSpread(target) { for (var i = 1; 
         _this4.cords = _this4.changePosition();
       });
     },
-    clickBlur: function clickBlur(event) {
-      var closestx = event.target.closest(".vs-select--options");
+    // clickBlur: function clickBlur(event) {
+    //   var closestx = event.target.closest(".vs-select--options");
 
+    //   if (!closestx) {
+    //     this.closeOptions();
+
+    //     if (this.autocomplete) {
+    //       this.filterItems("");
+    //     }
+
+    //     this.changeValue();
+    //   }
+    // },
+    clickBlur(event) {
+      //let closestx = event.target.closest(".vs-select--options");
+      let closestx = event.target.getElementsByClassName(
+        "vs-select--options"
+      )[0];
       if (!closestx) {
         this.closeOptions();
-
         if (this.autocomplete) {
           this.filterItems("");
         }
-
         this.changeValue();
       }
     },
